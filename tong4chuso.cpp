@@ -1,22 +1,13 @@
 #include <stdio.h>
-
 int main() {
-    int so, tong = 0;
-    int chuSo;
-
-   
-    printf("Nhap so nguyen co 4 chu so: ");
-    scanf("%d", &so);
-
-   
-    while (so != 0) {
-        chuSo = so % 10; 
-        tong += chuSo;   
-        so /= 10;       
-    }
-
-    printf("Tong cac chu so la: %d\n", tong);
-
+    char number[5];
+    printf("nhap so nguyen co 4 chu so: ");
+    scanf("%4s", number);
+    int total = 0;
+    total += number[0] - '0';
+    total += number[1] - '0';
+    total += number[2] - '0';
+    total += number[3] - '0';
+    printf("tong cac chu so %s la: %d\n", number, total);
     return 0;
 }
-
